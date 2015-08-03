@@ -2,5 +2,44 @@
 <input type="text" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/> <p>
 <label for="resp" class="rem">Respuesta:</label>
 <input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/> <p>
+<label for="tema" class="rem">Tema: </label>
+<select name="quiz[tema]">
+	<option value="otro" 
+		<% var selected = "";
+	       if (quiz.tema === "otro") { 
+	    	    selected = "selected";
+	       } %>
+	    <%= selected %>
+	    >Otros</option> 
+	<option value="humanidades" 
+		<% var selected = "";
+	       if (quiz.tema === "humanidades") { 
+	            selected = "selected";
+	       } %> 
+	    <%= selected %>
+	    >Humanidades</option> 
+	<option value="ocio" 
+	    <% var selected ="";
+	       if (quiz.tema === "ocio") { 
+	            selected = "selected";
+	       } %> 
+	    <%= selected %>
+	    >Ocio</option>  
+	<option value="ciencia" 
+	    <% var selected ="";
+	       if (quiz.tema === "ciencia") { 
+	            selected = "selected";
+	       } %> 
+	    <%= selected %>
+	    >Ciencia</option>   
+	<option value="tecnologia" 
+	    <% var selected ="";
+	       if (quiz.tema === "tecnologia") { 
+	            selected = "selected";
+	       } %> 
+	    <%= selected %>
+	    >Tecnología</option>    
+	</select>
+<p>
 <a href="/quizes"><button type="button">Cancelar</button></a>
 <input type="submit" value="Salvar">

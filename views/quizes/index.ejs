@@ -5,6 +5,24 @@
 <table>
 <% var i; for (i=0; i < quizes.length; i++) { %>
     <tr>
+        <% var tema = "";
+           if( quizes[i].tema === "otro") {
+              tema = "Otros";
+           }
+           else if( quizes[i].tema === "humanidades") {
+              tema = "Humanidades";
+           }
+           else if( quizes[i].tema === "ocio") {
+              tema = "Ocio";
+           }
+           else if( quizes[i].tema === "ciencia") {
+              tema = "Ciencia";
+           }
+           else if( quizes[i].tema === "tecnologia") {
+              tema = "Tecnología";
+           }
+        %>
+        <td><%= tema %>:  </td>
     	<td><a href="quizes/<%= quizes[i].id %>"> <%= quizes[i].pregunta %></a></td>
     	<td><a href="quizes/<%= quizes[i].id %>/edit"><button>editar</button></a></td>
     	<td>

@@ -25,6 +25,7 @@ router.delete('/quizes/:quizId(\\d+)',       quizController.destroy);
 router.get('/author', function(req, res) {
   res.render('author', {author: 'José Luis Avellano',
                         title: 'Quiz',
-                        photo: '/images/photo.jpg'});
+                        photo: '/images/photo.jpg',
+                        errors:[]});
 });
 module.exports = router;
